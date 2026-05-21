@@ -1,0 +1,251 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.98 0.005 250);
+  --foreground: oklch(0.15 0.04 255);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.04 255);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.04 255);
+  --primary: oklch(0.20 0.05 258);
+  --primary-foreground: oklch(0.99 0.005 90);
+  --secondary: oklch(0.96 0.008 250);
+  --secondary-foreground: oklch(0.20 0.05 258);
+  --muted: oklch(0.95 0.008 250);
+  --muted-foreground: oklch(0.52 0.025 255);
+  --accent: oklch(0.80 0.17 82);
+  --accent-foreground: oklch(0.18 0.04 255);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.91 0.015 255);
+  --input: oklch(0.91 0.015 255);
+  --ring: oklch(0.70 0.04 256);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-feature-settings: "cv02","cv03","cv04","cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(.22,1,.36,1), transform 0.65s cubic-bezier(.22,1,.36,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Marquee ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.animate-marquee { animation: marquee 28s linear infinite; }
+
+/* ── Gradient text ── */
+.gradient-text {
+  background: linear-gradient(135deg, #c8a84b 0%, #f0d080 50%, #c8a84b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glow button ── */
+.btn-glow {
+  box-shadow: 0 0 20px rgba(200,168,75,0.35), 0 4px 15px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 35px rgba(200,168,75,0.55), 0 8px 25px rgba(0,0,0,0.25);
+  transform: translateY(-1px);
+}
+
+/* ── Glass card ── */
+.glass {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* ── Service card hover ── */
+.service-card {
+  transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* ── Tech badge ── */
+.tech-badge {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.tech-badge:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ── Floating orbs ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33%       { transform: translateY(-18px) rotate(2deg); }
+  66%       { transform: translateY(-8px) rotate(-1deg); }
+}
+.float-orb { animation: float 7s ease-in-out infinite; }
+.float-orb-2 { animation: float 9s ease-in-out infinite reverse; }
+.float-orb-3 { animation: float 11s ease-in-out infinite 2s; }
+
+/* ── Counter ── */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Premium brand badge ── */
+@keyframes badgeGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(200,168,75,0.12), inset 0 1px 0 rgba(200,168,75,0.15); }
+  50%       { box-shadow: 0 0 32px rgba(200,168,75,0.22), inset 0 1px 0 rgba(200,168,75,0.25); }
+}
+.brand-badge {
+  animation: badgeGlow 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+.brand-badge:hover {
+  transform: scale(1.02);
+}
+
+/* ── Controlled atmospheric glow system ──
+   Use these instead of large inline blur divs.
+   Slim, focused, premium — never full-width wash. */
+
+/* Blue accent — slim left column light */
+.glow-blue-left {
+  position: absolute;
+  left: -60px; top: -60px;
+  width: 240px; height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,0.10) 0%, transparent 65%);
+  filter: blur(70px);
+  pointer-events: none;
+}
+/* Gold accent — slim right column light */
+.glow-gold-right {
+  position: absolute;
+  right: 4%; top: 15%;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,168,75,0.08) 0%, transparent 60%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+/* Indigo accent — subtle bottom */
+.glow-indigo-bottom {
+  position: absolute;
+  bottom: -30px; left: 38%;
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99,102,241,0.07) 0%, transparent 65%);
+  filter: blur(55px);
+  pointer-events: none;
+}
+/* CTA section pair — left + right bookends */
+.glow-cta-left {
+  position: absolute;
+  left: -60px; top: -60px;
+  width: 260px; height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,168,75,0.09) 0%, transparent 65%);
+  filter: blur(70px);
+  pointer-events: none;
+}
+.glow-cta-right {
+  position: absolute;
+  right: -60px; bottom: -60px;
+  width: 260px; height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59,130,246,0.07) 0%, transparent 65%);
+  filter: blur(70px);
+  pointer-events: none;
+}
+/* Light section ambient — very subtle gold center */
+.glow-light-center {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,168,75,0.04) 0%, transparent 65%);
+  filter: blur(80px);
+  pointer-events: none;
+}
