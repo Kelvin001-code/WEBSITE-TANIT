@@ -4,12 +4,14 @@ import logo from "@/assets/tanit-logo-final.png";
 import { Menu, X, ArrowRight, Phone } from "lucide-react";
 
 const links = [
-  { to: "/",           label: "Home" },
-  { to: "/about",      label: "About" },
-  { to: "/services",   label: "Services" },
-  { to: "/industries", label: "Industries" },
-  { to: "/products",   label: "Products" },
-  { to: "/contact",    label: "Contact" },
+  { to: "/",              label: "Home" },
+  { to: "/about",         label: "About" },
+  { to: "/services",      label: "Services" },
+  { to: "/industries",    label: "Industries" },
+  { to: "/products",      label: "Products" },
+  { to: "/partnerships",  label: "Partnerships" },
+  { to: "/careers",       label: "Careers" },
+  { to: "/contact",       label: "Contact" },
 ];
 
 export function Navbar() {

@@ -127,9 +127,10 @@ function Industries() {
       <div className="border-b border-border bg-secondary/50 py-4">
         <div className="mx-auto flex max-w-7xl flex-wrap justify-center gap-3 px-4">
           {["Enterprise-Grade Solutions","Secure & Scalable Systems","Trusted Technology Partner","Serving Tanzania & East Africa","14+ Industries Served"].map((t) => (
-            <span key={t} className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-wider"
-              style={{ borderColor:"rgba(200,168,75,0.28)", color:GOLD_DIM, background:GOLD_FAINT }}>
-              <CheckCircle2 size={10} style={{ color:GOLD }} /> {t}
+            <span key={t}
+              className="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11.5px] font-bold uppercase tracking-wider"
+              style={{ borderColor:"rgba(200,168,75,0.4)", color:"rgba(200,168,75,0.92)", background:"rgba(200,168,75,0.07)" }}>
+              <CheckCircle2 size={10} style={{ color:"#c8a84b" }} /> {t}
             </span>
           ))}
         </div>
@@ -315,7 +316,7 @@ function Industries() {
           </div>
           <div className="mt-12 grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-5">
             {[
-              { v:"5+",   l:"Years Experience" },
+              { v:"✦",    l:"Modern ICT Company" },
               { v:"14+",  l:"Industries Served" },
               { v:"50+",  l:"Projects Delivered" },
               { v:"100%", l:"Client Satisfaction" },

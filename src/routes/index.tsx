@@ -57,7 +57,7 @@ const services = [
 ];
 
 const stats = [
-  { value: 5,   suffix: "+",  label: "Years Experience",   sub: "Delivering excellence since day one",  Icon: Trophy },
+  { value: 0,   suffix: "",   label: "Modern Digital Innovation", sub: "Building scalable future-ready solutions",  Icon: Zap },
   { value: 100, suffix: "%",  label: "Tanzanian Owned",    sub: "Proudly built and led locally",         Icon: Flag },
   { value: 8,   suffix: "",   label: "Service Lines",      sub: "End-to-end technology coverage",        Icon: LayoutGrid },
   { value: 24,  suffix: "/7", label: "Client Support",     sub: "Always available when you need us",     Icon: Headphones },
@@ -309,7 +309,7 @@ function Index() {
 
                 {/* Number */}
                 <div style={{
-                  fontSize: "clamp(2rem, 4vw, 3rem)",
+                  fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
                   fontWeight: 800,
                   lineHeight: 1,
                   letterSpacing: "-0.02em",
@@ -318,7 +318,11 @@ function Index() {
                   WebkitTextFillColor: "transparent",
                   backgroundClip: "text",
                 }}>
-                  <Counter value={s.value} suffix={s.suffix} />
+                  {s.value === 0 ? (
+                    <span>✦</span>
+                  ) : (
+                    <Counter value={s.value} suffix={s.suffix} />
+                  )}
                 </div>
 
                 {/* Label */}
@@ -420,6 +424,74 @@ function Index() {
             <img src={pos} alt="BiasharaLink POS" loading="lazy" className="relative rounded-2xl shadow-2xl ring-1 ring-border" />
             <div className="absolute -bottom-4 -right-4 hidden rounded-2xl bg-accent px-5 py-3 text-sm font-bold text-accent-foreground shadow-xl sm:block">
               Anza Leo — Start Smart Today
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════
+          TEXTFY PARTNER BANNER
+      ════════════════════════════════════════ */}
+      <section className="relative overflow-hidden border-y border-border bg-primary py-12 text-primary-foreground">
+        {/* Slim atmospheric glow */}
+        <div className="pointer-events-none absolute inset-0">
+          <div style={{ position:"absolute", top:"50%", left:"50%", transform:"translate(-50%,-50%)", width:"500px", height:"160px", background:"radial-gradient(ellipse,rgba(59,130,246,0.07) 0%,transparent 70%)", filter:"blur(40px)" }} />
+        </div>
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-between gap-6 lg:flex-row">
+
+            {/* Left — partner info */}
+            <div className="flex items-center gap-5">
+              {/* TEXTFY logo mark */}
+              <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-2xl"
+                style={{ background:"linear-gradient(135deg,rgba(200,168,75,0.18),rgba(200,168,75,0.06))", border:"1px solid rgba(200,168,75,0.35)", boxShadow:"0 4px 20px rgba(200,168,75,0.15)" }}>
+                <svg viewBox="0 0 24 24" fill="none" width="26" height="26" stroke="#c8a84b" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                  <line x1="9" y1="10" x2="15" y2="10"/>
+                  <line x1="12" y1="7" x2="12" y2="13"/>
+                </svg>
+              </div>
+
+              <div>
+                {/* Partner badge */}
+                <div className="mb-1.5 inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5"
+                  style={{ background:"rgba(200,168,75,0.1)", border:"1px solid rgba(200,168,75,0.28)" }}>
+                  <span style={{ width:"5px", height:"5px", borderRadius:"50%", background:"#c8a84b", display:"inline-block" }} />
+                  <span style={{ fontSize:"9.5px", fontWeight:700, letterSpacing:"0.22em", color:"rgba(200,168,75,0.85)", textTransform:"uppercase" as const }}>Strategic Partner</span>
+                </div>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-xl font-black tracking-tight" style={{ color:"#c8a84b" }}>TEXTFY</span>
+                  <span style={{ fontSize:"11px", color:"rgba(255,255,255,0.35)", fontWeight:500 }}>Bulk SMS Platform</span>
+                </div>
+                <p style={{ fontSize:"13px", color:"rgba(255,255,255,0.58)", fontWeight:300, lineHeight:1.6, maxWidth:"420px", marginTop:"2px" }}>
+                  Send bulk SMS for marketing, OTP verification, business notifications and customer engagement — powered by TEXTFY.
+                </p>
+              </div>
+            </div>
+
+            {/* Right — feature pills + CTA */}
+            <div className="flex flex-col items-center gap-4 sm:flex-row lg:flex-col lg:items-end xl:flex-row xl:items-center">
+              {/* Feature pills */}
+              <div className="flex flex-wrap justify-center gap-2 lg:justify-end">
+                {["Bulk SMS","OTP Codes","Campaigns","Notifications"].map((t) => (
+                  <span key={t} className="rounded-full px-3 py-1 text-[11px] font-semibold"
+                    style={{ background:"rgba(255,255,255,0.05)", border:"1px solid rgba(255,255,255,0.1)", color:"rgba(255,255,255,0.55)" }}>
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              {/* CTA button */}
+              <Link to="/partnerships"
+                className="group inline-flex flex-shrink-0 items-center gap-2 rounded-xl px-6 py-3 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5"
+                style={{ background:"linear-gradient(135deg,#c8a84b,#f0d080)", color:"#1a1a0e", boxShadow:"0 4px 20px rgba(200,168,75,0.35)" }}>
+                <svg viewBox="0 0 24 24" fill="none" width="15" height="15" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+                Discover Bulk SMS
+                <ArrowRight size={13} className="transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
           </div>
         </div>

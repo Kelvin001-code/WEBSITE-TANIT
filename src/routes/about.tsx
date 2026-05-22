@@ -11,7 +11,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About TANIT — Tanzania Innovative Technology Company Limited" },
-      { name: "description", content: "Learn about TANIT — a fully registered Tanzanian ICT company delivering software, cybersecurity and digital solutions across East Africa since its founding." },
+      { name: "description", content: "Learn about TANIT — a fully registered Tanzanian ICT company delivering software, cybersecurity and digital solutions across Tanzania and East Africa." },
     ],
   }),
 });
@@ -123,7 +123,8 @@ function About() {
                   ["Short Name","TANIT"],
                   ["Legal Form","Limited Company"],
                   ["Registration No.","200925394"],
-                  ["Head Office","Mkuranga, Coast Region"],
+                  ["Head Office","Posta, Dar es Salaam"],
+                  ["Branch Offices","Dodoma · Coast Region · Mwanza"],
                   ["Jurisdiction","United Republic of Tanzania"],
                   ["Incorporated","Companies Act of 2002"],
                   ["Key Focus","Enterprise Tech, POS, Cybersecurity"],

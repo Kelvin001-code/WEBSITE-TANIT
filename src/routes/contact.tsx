@@ -110,7 +110,7 @@ function Contact() {
                 <h3 style={{ fontSize:"10.5px", fontWeight:700, letterSpacing:"0.24em", color:GOLD_DIM, textTransform:"uppercase" as const }}>Head Office</h3>
                 <div className="mt-5 space-y-3.5">
                   {[
-                    { Icon:MapPin, text:"Mkuranga, Coast Region, Tanzania" },
+                    { Icon:MapPin, text:"Posta, Dar es Salaam, Tanzania" },
                     { Icon:Phone,  text:"+255 699 846 887" },
                     { Icon:Phone,  text:"+255 694 893 936" },
                     { Icon:Phone,  text:"+255 623 766 144" },
@@ -127,7 +127,7 @@ function Contact() {
               {/* Registration card */}
               <div className="rounded-2xl border border-border bg-secondary/40 p-6">
                 <h3 style={{ fontSize:"10.5px", fontWeight:700, letterSpacing:"0.24em", color:GOLD_DIM, textTransform:"uppercase" as const }}>Registered Presence</h3>
-                <p className="mt-3 text-sm text-foreground/80">Dar es Salaam & Mkuranga, Coast Region, Tanzania</p>
+                <p className="mt-3 text-sm text-foreground/80">Dar es Salaam (Head Office) · Dodoma · Coast Region · Mwanza</p>
                 <p className="mt-2 text-xs text-muted-foreground">Reg. No. 200925394 — Incorporated under the Companies Act of 2002.</p>
               </div>
 
