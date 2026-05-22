@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿{
+{
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "website-tanit",
   "compatibility_date": "2025-09-24",
@@ -10,12 +9,3 @@
     "binding": "ASSETS"
   }
 }
-=======
-{
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "tanstack-start-app",
-  "compatibility_date": "2025-09-24",
-  "compatibility_flags": ["nodejs_compat"],
-  "main": "src/server.ts",
-}
->>>>>>> 0a382e0ad08661cc965fecc7675fd3a6f6732455

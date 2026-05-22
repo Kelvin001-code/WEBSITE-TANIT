@@ -8,10 +8,7 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
-<<<<<<< HEAD
     "deploy": "npm run build && wrangler deploy",
-=======
->>>>>>> 0a382e0ad08661cc965fecc7675fd3a6f6732455
     "lint": "eslint .",
     "format": "prettier --write ."
   },
