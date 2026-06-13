@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Layout } from "@/components/site/Layout";
 import {
@@ -595,7 +595,7 @@ function Partnerships() {
                       <Send size={15} /> Submit Partnership Request
                       <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                     </button>
-                    <a href="mailto:partnerships@tanit.co.tz"
+                    <a href="mailto:partnerships@tanitcoltd.co.tz"
                       className="group inline-flex items-center justify-center gap-2 rounded-xl border px-6 py-3.5 text-sm font-semibold text-foreground transition-all hover:shadow-md"
                       style={{ borderColor:"rgba(200,168,75,0.35)", background:"rgba(200,168,75,0.04)" }}>
                       <Mail size={15} style={{ color:GOLD }} /> Email Us Directly
@@ -680,8 +680,8 @@ function Partnerships() {
 
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Mail,    title:"Partnerships Email",    value:"partnerships@tanit.co.tz", href:"mailto:partnerships@tanit.co.tz", sub:"For partnership enquiries" },
-              { icon: Mail,    title:"Business Development",  value:"business@tanit.co.tz",     href:"mailto:business@tanit.co.tz",     sub:"For business proposals" },
+              { icon: Mail,    title:"Partnerships Email",    value:"partnerships@tanitcoltd.co.tz", href:"mailto:partnerships@tanitcoltd.co.tz", sub:"For partnership enquiries" },
+              { icon: Mail,    title:"Business Development",  value:"business@tanitcoltd.co.tz",     href:"mailto:business@tanitcoltd.co.tz",     sub:"For business proposals" },
               { icon: Phone,   title:"Official Hotline",      value:"+255 699 846 887",          href:"tel:+255699846887",               sub:"Mon–Sat, 8am–6pm EAT" },
               { icon: MapPin,  title:"Head Office",           value:"Posta, Dar es Salaam",      href:"#",                               sub:"Dodoma · Coast Region · Mwanza" },
             ].map((c, i) => (

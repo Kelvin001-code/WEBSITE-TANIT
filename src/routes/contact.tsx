@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Layout } from "@/components/site/Layout";
 import {
@@ -10,8 +10,12 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
   head: () => ({
     meta: [
-      { title: "Contact TANIT — Request a Quote or Consultation" },
-      { name: "description", content: "Get in touch with TANIT for software development, cybersecurity, ICT infrastructure and digital solutions in Tanzania and East Africa." },
+      { title: "Contact TANIT — Get a Quote | Software & ICT Company Tanzania" },
+      { name: "description", content: "Contact TANIT Tanzania for software development, cybersecurity, web apps, mobile apps and ICT solutions. Call +255 699 846 887 or email info@tanitcoltd.co.tz. Based in Mkuranga, Coast Region." },
+      { name: "keywords", content: "contact TANIT Tanzania, ICT company contact Tanzania, software development quote Tanzania, hire software developer Tanzania, IT company Dar es Salaam contact" },
+      { property: "og:title", content: "Contact TANIT — Tanzania Innovative Technology" },
+      { property: "og:description", content: "Get in touch with TANIT for software, cybersecurity and ICT solutions. Response within 24 hours." },
+      { property: "og:url", content: "https://tanitcoltd.co.tz/contact" },
     ],
   }),
 });
@@ -114,7 +118,7 @@ function Contact() {
                     { Icon:Phone,  text:"+255 699 846 887" },
                     { Icon:Phone,  text:"+255 694 893 936" },
                     { Icon:Phone,  text:"+255 623 766 144" },
-                    { Icon:Mail,   text:"info@tanit.co.tz" },
+                    { Icon:Mail,   text:"info@tanitcoltd.co.tz" },
                   ].map(({ Icon, text }, i) => (
                     <div key={i} className="flex items-start gap-3 text-sm text-foreground/75">
                       <Icon size={15} className="mt-0.5 flex-shrink-0" style={{ color:GOLD }} />

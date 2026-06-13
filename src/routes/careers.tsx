@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
 import { Layout } from "@/components/site/Layout";
 import {
@@ -675,7 +675,7 @@ function Careers() {
                       <Send size={15} /> Submit Application
                       <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                     </button>
-                    <a href="mailto:careers@tanit.co.tz"
+                    <a href="mailto:careers@tanitcoltd.co.tz"
                       className="group inline-flex items-center justify-center gap-2 rounded-xl border px-6 py-3.5 text-sm font-semibold text-foreground transition-all hover:shadow-md"
                       style={{ borderColor:"rgba(200,168,75,0.35)", background:"rgba(200,168,75,0.04)" }}>
                       <Mail size={15} style={{ color:GOLD }} /> Email CV Directly
@@ -797,8 +797,8 @@ function Careers() {
 
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Mail,     title:"Careers Email",      value:"careers@tanit.co.tz",   href:"mailto:careers@tanit.co.tz",   sub:"For job applications" },
-              { icon: Mail,     title:"HR Department",      value:"hr@tanit.co.tz",         href:"mailto:hr@tanit.co.tz",         sub:"For HR enquiries" },
+              { icon: Mail,     title:"Careers Email",      value:"careers@tanitcoltd.co.tz",   href:"mailto:careers@tanitcoltd.co.tz",   sub:"For job applications" },
+              { icon: Mail,     title:"HR Department",      value:"hr@tanitcoltd.co.tz",         href:"mailto:hr@tanitcoltd.co.tz",         sub:"For HR enquiries" },
               { icon: Phone,    title:"Recruitment Hotline",value:"+255 699 846 887",        href:"tel:+255699846887",             sub:"Mon–Sat, 8am–6pm EAT" },
               { icon: MapPin,   title:"Head Office",        value:"Posta, Dar es Salaam",   href:"#",                             sub:"Dodoma · Coast Region · Mwanza" },
             ].map((c, i) => (

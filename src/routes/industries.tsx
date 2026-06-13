@@ -13,8 +13,12 @@ export const Route = createFileRoute("/industries")({
   component: Industries,
   head: () => ({
     meta: [
-      { title: "Industries We Serve — TANIT Tanzania Innovative Technology" },
-      { name: "description", content: "TANIT delivers enterprise-grade ICT solutions across retail, healthcare, education, banking, government, logistics and more in Tanzania and East Africa." },
+      { title: "Industries We Serve — ICT Solutions for Every Sector | TANIT Tanzania" },
+      { name: "description", content: "TANIT delivers enterprise ICT solutions across retail, healthcare, education, banking, government, logistics, agriculture, e-commerce and more in Tanzania and East Africa." },
+      { name: "keywords", content: "ICT solutions Tanzania industries, software for healthcare Tanzania, banking software Tanzania, government technology Tanzania, retail POS Tanzania, e-commerce development Tanzania, education software Tanzania" },
+      { property: "og:title", content: "Industries We Serve — TANIT Tanzania Innovative Technology" },
+      { property: "og:description", content: "Enterprise-grade digital solutions across 14+ industries in Tanzania and East Africa." },
+      { property: "og:url", content: "https://tanitcoltd.co.tz/industries" },
     ],
   }),
 });

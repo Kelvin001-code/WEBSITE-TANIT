@@ -12,8 +12,12 @@ export const Route = createFileRoute("/products")({
   component: Products,
   head: () => ({
     meta: [
-      { title: "Products — BiasharaLink KOG POS | TANIT Tanzania Innovative Technology" },
-      { name: "description", content: "Discover BiasharaLink / KOG POS — TANIT's flagship point-of-sale and business management platform for retailers, pharmacies, restaurants and wholesalers across Tanzania." },
+      { title: "BiasharaLink KOG POS — Business Management System Tanzania | TANIT" },
+      { name: "description", content: "BiasharaLink KOG POS is a real-time cloud-based point-of-sale and business management system for retailers, pharmacies, restaurants and wholesalers in Tanzania. Plans from 180K TSH/year." },
+      { name: "keywords", content: "POS system Tanzania, point of sale Tanzania, BiasharaLink, KOG POS, business management software Tanzania, retail software Tanzania, pharmacy POS Tanzania, restaurant POS Tanzania, cloud POS Tanzania" },
+      { property: "og:title", content: "BiasharaLink KOG POS — Business Management System | TANIT Tanzania" },
+      { property: "og:description", content: "Cloud-based POS and business management system for Tanzanian businesses. From 180K TSH/year." },
+      { property: "og:url", content: "https://tanitcoltd.co.tz/products" },
     ],
   }),
 });

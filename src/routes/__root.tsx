@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+﻿import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
   Link,
@@ -88,24 +88,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "TANIT — Tanzania Innovative Technology | ICT, Software & Cybersecurity" },
-      { name: "description", content: "TANIT delivers secure, scalable ICT, software development, cybersecurity and POS solutions across Tanzania and East Africa. Our Technology, Your Success." },
+      { title: "TANIT — Tanzania Innovative Technology | Software, ICT & Cybersecurity Company" },
+      { name: "description", content: "TANIT is Tanzania's leading ICT company offering software development, cybersecurity, web development, mobile apps, cloud solutions and IT consultancy across East Africa. Registration No. 200925394." },
+      { name: "keywords", content: "ICT company Tanzania, software development Tanzania, cybersecurity Tanzania, web development Tanzania, mobile app development Tanzania, IT company Dar es Salaam, technology company Tanzania, software company East Africa, TANIT Tanzania, network infrastructure Tanzania, digital solutions Tanzania, IT consultancy Tanzania" },
       { name: "author", content: "TANIT — Tanzania Innovative Technology Company Limited" },
+      { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
       { name: "theme-color", content: "#0d1b2e" },
-      { property: "og:site_name", content: "TANIT" },
-      { property: "og:title", content: "TANIT — Tanzania Innovative Technology" },
-      { property: "og:description", content: "Secure, scalable ICT solutions — software, cybersecurity, infrastructure and digital transformation across Tanzania and East Africa." },
+      { name: "geo.region", content: "TZ" },
+      { name: "geo.placename", content: "Tanzania" },
+      { name: "language", content: "English" },
+      { property: "og:site_name", content: "TANIT — Tanzania Innovative Technology" },
+      { property: "og:title", content: "TANIT — Tanzania Innovative Technology | Software, ICT & Cybersecurity" },
+      { property: "og:description", content: "Tanzania's premier ICT company — software development, cybersecurity, web apps, mobile apps, cloud solutions and IT infrastructure across East Africa." },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://tanit.co.tz" },
+      { property: "og:url", content: "https://tanitcoltd.co.tz" },
+      { property: "og:locale", content: "en_TZ" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@TANITTanzania" },
       { name: "twitter:title", content: "TANIT — Tanzania Innovative Technology" },
-      { name: "twitter:description", content: "Secure, scalable ICT solutions across Tanzania and East Africa." },
+      { name: "twitter:description", content: "Tanzania's leading ICT company — software, cybersecurity, web & mobile development across East Africa." },
     ],
     links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
+      { rel: "stylesheet", href: appCss },
+      { rel: "canonical", href: "https://tanitcoltd.co.tz" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
+      { rel: "icon", type: "image/png", sizes: "192x192", href: "/favicon-192.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/favicon-180.png" },
+      { rel: "manifest", href: "/site.webmanifest" },
     ],
   }),
   shellComponent: RootShell,
@@ -115,10 +124,63 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ITCompany",
+    "name": "Tanzania Innovative Technology Company Limited",
+    "alternateName": "TANIT",
+    "url": "https://tanitcoltd.co.tz",
+    "logo": "https://tanitcoltd.co.tz/logo.png",
+    "description": "TANIT is a fully registered Tanzanian ICT company delivering software development, cybersecurity, web development, mobile applications, cloud solutions and IT consultancy across Tanzania and East Africa.",
+    "foundingDate": "2025",
+    "registration": "200925394",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Mkuranga",
+      "addressLocality": "Coast Region",
+      "addressCountry": "TZ",
+      "addressRegion": "Tanzania"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+255-699-846-887",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Swahili"]
+      },
+      {
+        "@type": "ContactPoint",
+        "telephone": "+255-694-893-936",
+        "contactType": "sales"
+      }
+    ],
+    "email": "info@tanitcoltd.co.tz",
+    "areaServed": ["Tanzania", "Kenya", "Uganda", "Rwanda", "East Africa"],
+    "serviceType": [
+      "Software Development",
+      "Cybersecurity",
+      "Web Development",
+      "Mobile App Development",
+      "ICT Infrastructure",
+      "IT Consultancy",
+      "Cloud Solutions",
+      "Artificial Intelligence"
+    ],
+    "sameAs": [
+      "https://www.facebook.com/TANITTanzania",
+      "https://www.linkedin.com/company/tanit-tanzania",
+      "https://twitter.com/TANITTanzania"
+    ]
+  };
+
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body>
         {children}

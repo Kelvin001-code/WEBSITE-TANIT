@@ -10,8 +10,12 @@ export const Route = createFileRoute("/services")({
   component: Services,
   head: () => ({
     meta: [
-      { title: "Services — Software, Cybersecurity, ICT Infrastructure | TANIT" },
-      { name: "description", content: "Detailed breakdown of TANIT's ICT services: software development, cybersecurity audits, infrastructure, AI/IoT, consultancy, training, repair and creative production." },
+      { title: "Services — Software Development, Cybersecurity, ICT Infrastructure | TANIT Tanzania" },
+      { name: "description", content: "TANIT offers 8 professional ICT services: software development, cybersecurity audits, web development, mobile apps, ICT infrastructure, AI & IoT, IT consultancy, creative branding and repair support across Tanzania." },
+      { name: "keywords", content: "software development Tanzania, cybersecurity services Tanzania, web development Tanzania, mobile app developer Tanzania, ICT infrastructure Tanzania, IT consultancy Tanzania, network installation Tanzania, computer repair Tanzania, AI solutions Tanzania" },
+      { property: "og:title", content: "ICT Services — Software, Cybersecurity & Infrastructure | TANIT Tanzania" },
+      { property: "og:description", content: "Professional software development, cybersecurity, web apps, mobile apps and ICT infrastructure services across Tanzania and East Africa." },
+      { property: "og:url", content: "https://tanitcoltd.co.tz/services" },
     ],
   }),
 });

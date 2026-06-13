@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+﻿import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import logo from "@/assets/tanit-logo-final.png";
 
@@ -97,7 +97,7 @@ export function Footer() {
               <li className="flex items-start gap-2.5 text-primary-foreground/40 text-xs"><MapPin size={13} className="mt-0.5 flex-shrink-0 text-accent/50" /> Offices also in Dodoma · Coast Region · Mwanza</li>
               <li className="flex items-center gap-2.5"><Phone size={15} className="flex-shrink-0 text-accent" /> +255 699 846 887</li>
               <li className="flex items-center gap-2.5"><Phone size={15} className="flex-shrink-0 text-accent" /> +255 694 893 936</li>
-              <li className="flex items-center gap-2.5"><Mail size={15} className="flex-shrink-0 text-accent" /> info@tanit.co.tz</li>
+              <li className="flex items-center gap-2.5"><Mail size={15} className="flex-shrink-0 text-accent" /> info@tanitcoltd.co.tz</li>
             </ul>
 
             {/* Newsletter */}

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import { Layout } from "@/components/site/Layout";
 import {
@@ -10,8 +10,12 @@ export const Route = createFileRoute("/about")({
   component: About,
   head: () => ({
     meta: [
-      { title: "About TANIT — Tanzania Innovative Technology Company Limited" },
-      { name: "description", content: "Learn about TANIT — a fully registered Tanzanian ICT company delivering software, cybersecurity and digital solutions across Tanzania and East Africa." },
+      { title: "About TANIT — Tanzania Innovative Technology Company Limited | Reg. 200925394" },
+      { name: "description", content: "TANIT (Reg. 200925394) is a fully registered Tanzanian ICT company incorporated under the Companies Act of 2002, delivering software development, cybersecurity and digital solutions across East Africa." },
+      { name: "keywords", content: "about TANIT Tanzania, Tanzania ICT company, registered technology company Tanzania, TANIT 200925394, software company Tanzania, Mkuranga Coast Region" },
+      { property: "og:title", content: "About TANIT — Tanzania Innovative Technology Company Limited" },
+      { property: "og:description", content: "TANIT is a fully registered Tanzanian ICT company delivering software, cybersecurity and digital solutions across East Africa." },
+      { property: "og:url", content: "https://tanitcoltd.co.tz/about" },
     ],
   }),
 });

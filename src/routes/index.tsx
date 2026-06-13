@@ -11,7 +11,19 @@ import {
   Monitor, Trophy, Flag, LayoutGrid, Headphones,
 } from "lucide-react";
 
-export const Route = createFileRoute("/")({ component: Index });
+export const Route = createFileRoute("/")({
+  component: Index,
+  head: () => ({
+    meta: [
+      { title: "TANIT — Tanzania Innovative Technology | #1 ICT Company in Tanzania" },
+      { name: "description", content: "TANIT is Tanzania's leading ICT and software company. We deliver web development, mobile apps, cybersecurity, cloud solutions and IT infrastructure across Tanzania and East Africa. Registration No. 200925394." },
+      { name: "keywords", content: "ICT company Tanzania, software company Tanzania, web development Tanzania, mobile app development Tanzania, cybersecurity Tanzania, IT company Tanzania, technology company Dar es Salaam" },
+      { property: "og:title", content: "TANIT — Tanzania Innovative Technology | ICT & Software Company" },
+      { property: "og:description", content: "Tanzania's leading ICT company delivering software, cybersecurity, web apps and digital solutions across East Africa." },
+      { property: "og:url", content: "https://tanitcoltd.co.tz" },
+    ],
+  }),
+});
 
 /* ── Scroll reveal hook ── */
 function useReveal() {
